@@ -5,18 +5,12 @@ import * as styles from "./blog.module.scss";
 const BlogPage = () => {
   const blogData = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allContentfulBlogPost(sort: { publishedDate: DESC }) {
         edges {
           node {
-            frontmatter {
-              title
-              date
-            }
-            fields {
-              slug
-            }
-            html
-            excerpt
+            title
+            slug
+            publishedDate(formatString: "MMMM Do, YYYY")
           }
         }
       }
@@ -27,12 +21,12 @@ const BlogPage = () => {
     <Layout>
       <h1>Blog</h1>
       <ol className={styles.posts}>
-        {blogData.allMarkdownRemark.edges.map((data) => {
+        {blogData.allContentfulBlogPost.edges.map((data) => {
           return (
-            <li className={styles.post} key={data.node.frontmatter.title}>
-              <Link to={`/blog/${data.node.fields.slug}`}>
-                <h2>{data.node.frontmatter.title} </h2>
-                <p>{data.node.frontmatter.date}</p>
+            <li className={styles.post} key={data.node.title}>
+              <Link to={`/blog/${data.node.slug}`}>
+                <h2>{data.node.title} </h2>
+                <p>{data.node.publishedDate}</p>
               </Link>
             </li>
           );
