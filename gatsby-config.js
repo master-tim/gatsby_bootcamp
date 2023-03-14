@@ -13,6 +13,15 @@ module.exports = {
     author: "Temirlan Dzhoroev",
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        // spaceId: process.env.$CONTENTFUL_SPACE_ID,
+        // accessToken: process.env.$CONTENTFUL_ACCESS_TOKEN,
+        spaceId: `x0c9bo289gav`,
+        accessToken: `E1Glu2Km8xpATkd_IQJZzLiD_-1sJluKZe1ZgFNXvj8`,
+      },
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,6 +30,9 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -30,13 +42,13 @@ module.exports = {
           `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
-            options :{
+            options: {
               maxWidth: 1024,
               linkImagesToOriginal: false,
-            }
-          }
-        ]
-      }
+            },
+          },
+        ],
+      },
     },
   ],
 };
