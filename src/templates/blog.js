@@ -1,8 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 
 import Layout from "../components/layout";
+
 
 export const query = graphql`
   query ($slug: String!) {
@@ -12,10 +14,9 @@ export const query = graphql`
       body {
         raw
         references {
-          file {
-            fileName
-            url
-          }
+          contentful_id
+          title
+          url
         }
       }
     }
@@ -23,13 +24,27 @@ export const query = graphql`
 `;
 
 const Blog = (props) => {
-  const body = JSON.parse(props.data.contentfulBlogPost.body.raw);
+
+  const assets = new Map(
+    props.data.contentfulBlogPost.body.references.map((ref) => [ref.contentful_id, ref])
+  );
+
+  const options = {
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        console.log(assets.get(node.data.target.sys.id));
+        const url = assets.get(node.data.target.sys.id).url;
+        const alt = assets.get(node.data.target.sys.id).fileName;
+        return <img alt={alt} src={url} />;
+      },
+    },
+  };
 
   return (
     <Layout>
-      <h3>{props.data.contentfulBlogPost.title}</h3>
+      <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
-      {documentToReactComponents(body)}
+      {documentToReactComponents(JSON.parse(props.data.contentfulBlogPost.body.raw), options)}
     </Layout>
   );
 };
