@@ -32,7 +32,7 @@ const Blog = (props) => {
   const options = {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
-        console.log(assets.get(node.data.target.sys.id));
+        // console.log(assets.get(node.data.target.sys.id));
         const url = assets.get(node.data.target.sys.id).url;
         const alt = assets.get(node.data.target.sys.id).fileName;
         return <img alt={alt} src={url} />;
