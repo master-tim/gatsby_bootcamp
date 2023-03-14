@@ -1,3 +1,29 @@
-.main {
-    color: gray
+.header {
+    padding: 1rem 0 3rem;
+}
+.title{
+    color: black;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.nav-list{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav-item {
+    color: gray;
+    font-size: .9rem;
+    margin-right: 1.3rem;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    color: darkslategrey;
+}
+
+.active-nav-item {
+    color:black
 }
