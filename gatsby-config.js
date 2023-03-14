@@ -7,19 +7,24 @@
 // /**
 //  * @type {import('gatsby').GatsbyConfig}
 //  */
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+
 module.exports = {
   siteMetadata: {
     title: "Full-Stack Bootcamp",
     author: "Temirlan Dzhoroev",
   },
   plugins: [
+    `@contentful/gatsby-transformer-contentful-richtext`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        // spaceId: process.env.$CONTENTFUL_SPACE_ID,
-        // accessToken: process.env.$CONTENTFUL_ACCESS_TOKEN,
-        spaceId: `x0c9bo289gav`,
-        accessToken: `E1Glu2Km8xpATkd_IQJZzLiD_-1sJluKZe1ZgFNXvj8`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     `gatsby-plugin-sass`,
