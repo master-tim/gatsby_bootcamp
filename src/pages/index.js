@@ -8,9 +8,9 @@ const IndexPage = () => {
       <h1>Hello.</h1>
       <h2>
         I'm{" "}
-        <Link to="https://www.linkedin.com/in/dzhoroev7/" target="_blank">
+        <a href="https://twitter.com/gatsbyjs">
           Tim
-        </Link>
+        </a>
         , a front-end devloper living in beautiful Seoul.
       </h2>
       <p>

@@ -33,7 +33,6 @@ module.exports = {
             options :{
               maxWidth: 1024,
               linkImagesToOriginal: false,
-              wrapperStyle: {aspectRatio: true}
             }
           }
         ]
