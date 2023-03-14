@@ -8,5 +8,9 @@
 //  * @type {import('gatsby').GatsbyConfig}
 //  */
 module.exports = {
+  siteMetadata: {
+    title: "Full-Stack Bootcamp",
+    author: "Temirlan Dzhoroev",
+  },
   plugins: ["gatsby-plugin-sass"],
 };
