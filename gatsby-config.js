@@ -21,6 +21,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -30,8 +31,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options :{
-              maxWidth: 650,
+              maxWidth: 1024,
               linkImagesToOriginal: false,
+              wrapperStyle: {aspectRatio: true}
             }
           }
         ]
