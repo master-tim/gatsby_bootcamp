@@ -1,16 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import { graphql, useStaticQuery } from "gatsby";
-
-const handleBlogList = (prop) => {
-  return prop.map((data) => (
-    <li key={data.node.frontmatter.title}>
-      <h2>{data.node.frontmatter.title}</h2>
-      <p>{data.node.frontmatter.date}</p>
-      <p>{data.node.excerpt}</p>
-    </li>
-  ));
-};
+import { Link, graphql, useStaticQuery } from "gatsby";
 
 const BlogPage = () => {
   const blogData = useStaticQuery(graphql`
@@ -33,7 +23,14 @@ const BlogPage = () => {
   return (
     <Layout>
       <h1>Blog</h1>
-      <ol>{handleBlogList(blogData.allMarkdownRemark.edges)}</ol>
+      <ol>
+        {blogData.allMarkdownRemark.edges.map((data) => (
+          <li key={data.node.frontmatter.title}>
+            <h2>{data.node.frontmatter.title}</h2>
+            <p>{data.node.frontmatter.date}</p>
+          </li>
+        ))}
+      </ol>
     </Layout>
   );
 };
