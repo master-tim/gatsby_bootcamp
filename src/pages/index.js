@@ -5,7 +5,13 @@ const IndexPage = () => {
   return (
     <div>
       <h1>Hello.</h1>
-      <h2>I'm Tim, a front-end devloper living in beautiful Seoul.</h2>
+      <h2>
+        I'm{" "}
+        <Link to="https://www.linkedin.com/in/dzhoroev7/" target="_blank">
+          Tim
+        </Link>
+        , a front-end devloper living in beautiful Seoul.
+      </h2>
       <p>
         <a href="/contact"> Need developer? </a>
       </p>
