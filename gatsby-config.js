@@ -13,7 +13,7 @@ module.exports = {
     author: "Temirlan Dzhoroev",
   },
   plugins: [
-    "gatsby-plugin-sass",
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,6 +21,21 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options :{
+              maxWidth: 650,
+              linkImagesToOriginal: false,
+            }
+          }
+        ]
+      }
+    },
   ],
 };
