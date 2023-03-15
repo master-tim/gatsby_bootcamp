@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Text, Heading } from "@chakra-ui/react";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -22,6 +22,7 @@ const Header = () => {
       left={0}
       right={0}
       backgroundColor="#18181b"
+      opacity="80%"
       zIndex={999}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
@@ -33,9 +34,9 @@ const Header = () => {
         >
           <nav>
             <HStack spacing={8}>
-              <Text fontSize="2xl" color="white">
+              <Heading size="md" color="white">
                 <Link to="/">{data.site.siteMetadata.author}</Link>
-              </Text>
+              </Heading>
             </HStack>
           </nav>
           <nav>
