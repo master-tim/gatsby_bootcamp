@@ -8,10 +8,10 @@ import { Box, HStack, Text, VStack } from "@chakra-ui/react";
 
 const Layout = (props) => {
   return (
-    <Box p={8}>
+    <Box>
       <VStack >
-        <FullScreenSection >
-          <Header />
+        <Header />
+        <FullScreenSection width="90vw">
           {props.children}
         </FullScreenSection>
         <Footer />

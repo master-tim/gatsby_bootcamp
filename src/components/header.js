@@ -15,17 +15,16 @@ const Header = () => {
       }
     }
   `);
+
   return (
     <Box
-      position="fixed"
-      top={0}
-      left={0}
-      right={0}
-      backgroundColor="#18181b"
-      opacity="80%"
+      // position="fixed"
+      width="100vw"
+      justifyContent="space-around"
+      backgroundColor="whitesmoke"
       zIndex={999}
     >
-      <Box color="white" maxWidth="1280px" margin="0 auto">
+      <Box maxWidth="1280px" margin="0 auto">
         <HStack
           px={16}
           py={4}
@@ -34,8 +33,8 @@ const Header = () => {
         >
           <nav>
             <HStack spacing={8}>
-              <Heading size="md" color="white">
-                <Link to="/">{data.site.siteMetadata.author}</Link>
+              <Heading size="lg">
+                <Link to="/">Tim</Link>
               </Heading>
             </HStack>
           </nav>
