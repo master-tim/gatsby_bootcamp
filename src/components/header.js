@@ -1,18 +1,18 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import {
   Box,
   Flex,
   Text,
   Avatar,
   HStack,
-  Link,
   Heading,
   IconButton,
   useDisclosure,
   useColorModeValue,
   Stack,
 } from "@chakra-ui/react";
+
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 function Header() {
@@ -33,7 +33,7 @@ function Header() {
 
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4} width="100vw">
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -44,16 +44,10 @@ function Header() {
           />
 
           <HStack spacing={8} alignItems={"center"} marginLeft="1rem">
-            <Box>
-              <Heading>
-                <Link to="/">{data.site.siteMetadata.nickname}</Link>
-              </Heading>
-            </Box>
-            <HStack
-              as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
-            >
+            <Heading>
+              <Link to="/">{data.site.siteMetadata.nickname}</Link>
+            </Heading>
+            <HStack as={"nav"} spacing={4}>
               <Link
                 to="/about"
                 px={2}
@@ -68,6 +62,7 @@ function Header() {
               </Link>
 
               <Link
+                to="/blog"
                 px={2}
                 py={1}
                 rounded={"md"}
@@ -75,12 +70,12 @@ function Header() {
                   textDecoration: "none",
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
-                to="/blog"
               >
                 Blogs
               </Link>
 
               <Link
+                to="/contact"
                 px={2}
                 py={1}
                 rounded={"md"}
@@ -88,7 +83,6 @@ function Header() {
                   textDecoration: "none",
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
-                to="/contact"
               >
                 Contact
               </Link>
