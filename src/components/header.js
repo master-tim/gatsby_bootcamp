@@ -1,8 +1,16 @@
 import React from "react";
-
 import { Link, graphql, useStaticQuery } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-import * as styles from "./header.module.scss";
+import {
+  faGithub,
+  faLinkedin,
+  faMedium,
+  faStackOverflow,
+} from "@fortawesome/free-brands-svg-icons";
+
+import { Box, HStack, Text } from "@chakra-ui/react";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -17,51 +25,52 @@ const Header = () => {
     }
   `);
   return (
-    <header className={styles.header}>
-      <h1>
-        <Link className={styles.title} to="/">
-          {data.site.siteMetadata.name}
-        </Link>
-      </h1>
-      <ul className={styles.navList}>
-        <li>
-          <Link
-            className={styles.navItem}
-            activeClassName={styles.activeNavItem}
-            to="/"
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={styles.navItem}
-            activeClassName={styles.activeNavItem}
-            to="/about"
-          >
-            About me
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={styles.navItem}
-            activeClassName={styles.activeNavItem}
-            to="/blog"
-          >
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={styles.navItem}
-            activeClassName={styles.activeNavItem}
-            to="/contact"
-          >
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </header>
+    <Box
+      position="fixed"
+      top={0}
+      left={0}
+      right={0}
+      backgroundColor="#18181b"
+      zIndex={999}
+    >
+      <Box color="white" maxWidth="1280px" margin="0 auto">
+        <HStack
+          px={16}
+          py={4}
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          <nav>
+            <HStack spacing={8}>
+              <Text fontSize="2xl" color="white">
+                <Link to="/">{data.site.siteMetadata.author}</Link>
+              </Text>
+              <a href="https://github.com/master-tim">
+                {" "}
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </a>
+              <a href="https://www.linkedin.com/in/dzhoroev7/">
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              </a>
+              <a>
+                <FontAwesomeIcon icon={faMedium} size="2x" />
+              </a>
+              <a>
+                <FontAwesomeIcon icon={faStackOverflow} size="2x" />
+              </a>
+            </HStack>
+          </nav>
+          <nav>
+            <HStack spacing={8}>
+              <Link to="/">Home</Link>
+              <Link to="/about">About me</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/contact">Contact</Link>
+            </HStack>
+          </nav>
+        </HStack>
+      </Box>
+    </Box>
   );
 };
 

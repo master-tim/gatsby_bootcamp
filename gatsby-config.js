@@ -10,7 +10,7 @@
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -19,7 +19,14 @@ module.exports = {
     name: "Personal blog",
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        isUsingColorMode: false,
+      },
+    },
+    "gatsby-plugin-react-helmet",
     `@contentful/gatsby-transformer-contentful-richtext`,
     {
       resolve: `gatsby-source-contentful`,
