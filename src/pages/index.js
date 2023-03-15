@@ -8,21 +8,17 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Experience from "../components/Experience";
 
-
 const MyScene = () => {
-  return (
+  return (<>
     <Canvas
       shadowMap
-      camera={{
-        fov: 45,
-        near: 0.1,
-        far: 2000,
-        position: [0, 1.5, 4],
-      }}
+      dpr={[1, 2]}
+      camera={{ position: [0, 0, 5] }}
       style={{ minHeight: "100vh", minWidth: "75vw" }}
     >
       <Experience />
     </Canvas>
+    </>
   );
 };
 
