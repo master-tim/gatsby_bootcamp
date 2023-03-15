@@ -35,4 +35,4 @@ If you would like to contribute to this website, please feel free to submit a pu
 
 ## 📧 Contact
 
-If you have any questions or comments about this website, please feel free to contact me at [insert email address here].
+If you have any questions or comments about this website, please feel free to contact me.
