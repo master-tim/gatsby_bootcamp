@@ -4,14 +4,14 @@ import Header from "./header";
 import Footer from "./footer";
 import FullScreenSection from "./FullScreenSection";
 
-import { Box, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 
 const Layout = (props) => {
   return (
     <Box>
       <VStack >
         <Header />
-        <FullScreenSection width="90vw">
+        <FullScreenSection width="90vw" marginTop="60px">
           {props.children}
         </FullScreenSection>
         <Footer />

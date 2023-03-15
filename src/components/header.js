@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <Box
-      // position="fixed"
+      position="fixed"
       width="100vw"
       justifyContent="space-around"
       backgroundColor="whitesmoke"

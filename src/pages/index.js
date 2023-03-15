@@ -19,24 +19,7 @@ const IndexPage = () => {
   `);
   return (
     <Layout>
-      <Box>
-        <VStack spacing={8} justifyContent="center" alignItems="center">
-          <Head title="Home" />
-          <Heading>Hello.</Heading>
-          <Heading size="md">I'm {data.site.siteMetadata.author}</Heading>
-          <Heading size="sm">
-            UX Engineer Front-end Engineer Interaction Designer
-          </Heading>
-          <Text
-            color="#ed7966"
-            _hover={{
-              color: "#f5cac2",
-            }}
-          >
-            <Link to="/contact"> Need developer? </Link>
-          </Text>
-        </VStack>
-      </Box>
+      
     </Layout>
   );
 };
