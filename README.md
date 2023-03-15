@@ -1,6 +1,7 @@
 # 📝 Personal Blog Website
 
-This is my personal blog website created using Gatsby, React, and GraphQL. It is fully operational and ready for visitors to explore.
+This is my personal blog website created using Gatsby, React, and GraphQL. It is fully operational and ready for visitors to explore. [Personal Blog is here](https://link-url-here.org)
+
 
 ## 🚀 Installation
 
