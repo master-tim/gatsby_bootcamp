@@ -13,7 +13,7 @@ const MyScene = () => {
     <Canvas
       shadowMap
       dpr={[1, 2]}
-      camera={{ position: [0, 0, 5] }}
+      camera={{ position: [30, 0, 5] }}
       style={{ minHeight: "100vh", minWidth: "75vw" }}
     >
       <Experience />
