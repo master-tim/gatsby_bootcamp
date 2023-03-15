@@ -22,9 +22,6 @@ const IndexPage = () => {
       <h2>I'm {data.site.siteMetadata.author}</h2>
       <h3>UX Engineer Front-end Engineer Interaction Designer</h3>
       <p>
-        <a href="/contact"> Need developer? </a>
-      </p>
-      <p>
         <Link to="/contact"> Need developer? </Link>
       </p>
     </Layout>
