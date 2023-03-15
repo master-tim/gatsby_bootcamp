@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
-import {
+import Chakra, {
   Box,
   Flex,
   Text,
@@ -44,12 +44,19 @@ function Header() {
           />
 
           <HStack spacing={8} alignItems={"center"} marginLeft="1rem">
-            <Heading>
+            <Heading
+              px={2}
+              py={1}
+              rounded={"md"}
+              _hover={{
+                textDecoration: "none",
+                bg: useColorModeValue("gray.200", "gray.700"),
+              }}
+            >
               <Link to="/">{data.site.siteMetadata.nickname}</Link>
             </Heading>
             <HStack as={"nav"} spacing={4}>
-              <Link
-                to="/about"
+              <Text
                 px={2}
                 py={1}
                 rounded={"md"}
@@ -58,11 +65,9 @@ function Header() {
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
               >
-                About
-              </Link>
-
-              <Link
-                to="/blog"
+                <Link to="/about">About</Link>
+              </Text>
+              <Text
                 px={2}
                 py={1}
                 rounded={"md"}
@@ -71,11 +76,9 @@ function Header() {
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
               >
-                Blogs
-              </Link>
-
-              <Link
-                to="/contact"
+                <Link to="/blog">Blogs</Link>
+              </Text>
+              <Text
                 px={2}
                 py={1}
                 rounded={"md"}
@@ -84,8 +87,8 @@ function Header() {
                   bg: useColorModeValue("gray.200", "gray.700"),
                 }}
               >
-                Contact
-              </Link>
+                <Link to="/contact">Contact</Link>
+              </Text>
             </HStack>
           </HStack>
 
