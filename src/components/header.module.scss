@@ -1,10 +1,15 @@
+
 .header {
     padding: 1rem 0 3rem;
 }
 .title{
-    color: black;
-    font-size: 3rem;
+    color: #f8b195;
+    font-size: 2rem;
     text-decoration: none;
+}
+
+.title:hover{
+    color: #f67280;
 }
 
 .nav-list{
@@ -14,16 +19,16 @@
 }
 
 .nav-item {
-    color: gray;
+    color: #f8b195;
     font-size: .9rem;
     margin-right: 1.3rem;
     text-decoration: none;
 }
 
 .nav-item:hover {
-    color: darkslategrey;
+    color: #f67280;
 }
 
 .active-nav-item {
-    color:black
+    color:#c06c84;
 }
