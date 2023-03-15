@@ -36,10 +36,10 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`, // Needed for dynamic images
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    // `gatsby-plugin-sharp`,
+    // `gatsby-transformer-sharp`, // Needed for dynamic images
+    // `gatsby-transformer-sharp`,
+    // `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
