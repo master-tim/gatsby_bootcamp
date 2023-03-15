@@ -7,7 +7,7 @@ const ContactPage = () => {
     <Layout>
       <Head title="Contact" />
       <h1>Contact:</h1>
-      <p>Name email etc.</p>
+      <p>You can reach me out through <a href="https://www.linkedin.com/in/dzhoroev7/" target="_blank" >Linkedin</a> </p>
     </Layout>
   );
 };
