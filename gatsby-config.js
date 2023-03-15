@@ -17,7 +17,7 @@ module.exports = {
   siteMetadata: {
     title: "Full-Stack Bootcamp",
     author: "Temirlan Dzhoroev",
-    name: "Temirlan's blog",
+    name: "Tim's portfolio",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
