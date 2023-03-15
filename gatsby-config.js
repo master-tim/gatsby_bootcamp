@@ -19,6 +19,7 @@ module.exports = {
     author: "Temirlan Dzhoroev",
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     `@contentful/gatsby-transformer-contentful-richtext`,
     {
       resolve: `gatsby-source-contentful`,
