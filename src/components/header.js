@@ -41,10 +41,34 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <Link to="/">Home</Link>
-              <Link to="/about">About me</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
+              <Text
+                _hover={{
+                  color: "#ed7966",
+                }}
+              >
+                <Link to="/">Home</Link>
+              </Text>
+              <Text
+                _hover={{
+                  color: "#ed7966",
+                }}
+              >
+                <Link to="/about">About me</Link>
+              </Text>
+              <Text
+                _hover={{
+                  color: "#ed7966",
+                }}
+              >
+                <Link to="/blog">Blog</Link>
+              </Text>
+              <Text
+                _hover={{
+                  color: "#ed7966",
+                }}
+              >
+                <Link to="/contact">Contact</Link>{" "}
+              </Text>
             </HStack>
           </nav>
         </HStack>

@@ -30,7 +30,6 @@ const IndexPage = () => {
           <Text
             color="#ed7966"
             _hover={{
-              background: "white",
               color: "#f5cac2",
             }}
           >
