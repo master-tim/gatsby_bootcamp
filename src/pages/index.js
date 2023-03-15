@@ -17,7 +17,7 @@ const MyScene = () => {
         far: 2000,
         position: [-3, 1.5, 4],
       }}
-      style={{ minHeight: "100vh", minWidth: "90vw" }}
+      style={{ minHeight: "100vh", minWidth: "75vw" }}
     >
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
