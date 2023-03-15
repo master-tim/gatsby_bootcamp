@@ -3,28 +3,28 @@
     margin: 0;
 }
 .latest {
-    color: gray;
+    color: #303179;
     font-style: italic;
 }
 .post {
     margin: 1rem 0 ;
     a {
         border-radius: 2rem;
-        background-color: #fae5df;
-        color: #264143;
+        background-color: #f5cac2;
+        color: #303179;
         display: block;
         padding: 1rem;
         text-decoration: none;
     }
     a:hover {
-        background-color: #f5cac2;
+        background-color: #ed7966;
     }
     h2 {
         margin: 1rem;
     }
     p {
         margin: 0 1rem 1rem;
-        color: #264143;
+        color: #303179;
         font-size: .8rem;
         font-style: italic;
     }
