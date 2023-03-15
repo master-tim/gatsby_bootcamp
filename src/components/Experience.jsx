@@ -2,8 +2,8 @@
 import React from "react";
 import * as THREE from "three";
 import {useRef, useState, useMemo, useEffect} from "react";
-import {Canvas, useFrame} from "@react-three/fiber";
-import {Text, TrackballControls, OrbitControls} from "@react-three/drei";
+import {useFrame} from "@react-three/fiber";
+import {Text, OrbitControls} from "@react-three/drei";
 
 const skills = [
     "JavaScript",
@@ -143,6 +143,6 @@ export default function Experience() {
 
         <Cloud count={8}
             radius={20}/>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false}/>
     </>);
 }

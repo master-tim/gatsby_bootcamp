@@ -9,9 +9,9 @@ import FullScreenSection from "./FullScreenSection";
 const Layout = (props) => {
   return (
     <Box>
-      <VStack >
+      <VStack minWidth="100vw">
         <Header />
-        <FullScreenSection width="90vw" marginTop="60px">
+        <FullScreenSection width="90vw" >
           {props.children}
         </FullScreenSection>
         <Footer />

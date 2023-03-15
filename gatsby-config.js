@@ -17,6 +17,7 @@ module.exports = {
     title: "Full-Stack Bootcamp",
     author: "Temirlan Dzhoroev",
     name: "Personal blog",
+    nickname: "TD",
   },
   plugins: [
     `gatsby-plugin-fontawesome-css`,
