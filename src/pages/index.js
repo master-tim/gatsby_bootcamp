@@ -1,14 +1,26 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import Head from "../components/head";
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        author
+        name
+      }
+    }
+  }
+  `);
   return (
     <Layout>
       <Head title="Home" />
       <h1>Hello.</h1>
-      <h2>I'm Tim , a front-end devloper living in beautiful Seoul.</h2>
+      <h2>I'm {data.site.siteMetadata.author}</h2>
+      <h3>UX Engineer Front-end Engineer Interaction Designer</h3>
       <p>
         <a href="/contact"> Need developer? </a>
       </p>
