@@ -173,7 +173,7 @@ export default function Experience() {
 
     return (
         <>
-            <ambientLight/>
+            <ambientLight intensity={0.4}/>
             <fog attach="fog"
                 args={
                     ["#202020", 0, 80]
@@ -226,7 +226,7 @@ export default function Experience() {
                 }/>
                 <meshBasicMaterial color="hotpink"/>
             </mesh>
-            <OrbitControls enableZoom={true}/>
+            <OrbitControls enableZoom={false}/>
         </>
     );
 }
