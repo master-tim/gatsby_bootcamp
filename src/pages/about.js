@@ -22,7 +22,6 @@ const AboutPage = () => {
       <Head title="About me" />
       <Box>
         <VStack spacing={8} justifyContent="center" alignItems="center">
-          <Head title="Home" />
           <Heading>{data.site.siteMetadata.author}</Heading>
           <Heading size="md">
             UX Engineer . Front-end Engineer . Interaction Designer
