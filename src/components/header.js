@@ -37,7 +37,7 @@ const Indexes = (data) => {
 					textDecoration: 'none',
 					bg: useColorModeValue('gray.200', 'gray.700'),
 				}}>
-				<Link to='/'>DT</Link>
+				<Link to='/'>Home</Link>
 			</Heading>
 			<HStack
 				as={'nav'}

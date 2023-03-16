@@ -2,13 +2,11 @@ import React from "react";
 import {useFrame, useLoader} from "@react-three/fiber";
 import {useEffect, useRef} from "react";
 import * as THREE from "three";
-import hills from "../img/hills.jpg";
-import author from "../img/author.jpg";
+import author from "../../img/author.jpg";
 
-import {fragmentShader} from "../shaders/fragment";
-import {vertexShader} from "../shaders/vertex";
+import {fragmentShader} from "../../shaders/fragment";
+import {vertexShader} from "../../shaders/vertex";
 import {gsap} from "gsap";
-import { position } from "@chakra-ui/react";
 
 const IMG_SRC = author;
 

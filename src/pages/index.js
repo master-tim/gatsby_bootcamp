@@ -6,7 +6,7 @@ import { Box } from '@chakra-ui/react'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
-import Experience from '../components/Experience'
+import Experience from '../components/threeJS/Experience'
 import Head from '../components/head'
 
 const MyScene = () => {
