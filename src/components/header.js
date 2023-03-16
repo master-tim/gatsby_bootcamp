@@ -43,36 +43,35 @@ const Indexes = (data) => {
 				as={'nav'}
 				spacing={4}
 				display={{ base: 'none', md: 'flex' }}>
-				<Text
+				
+					<Link to='/about'><Text
 					px={2}
 					py={1}
 					rounded={'md'}
 					_hover={{
 						textDecoration: 'none',
 						bg: useColorModeValue('gray.200', 'gray.700'),
-					}}>
-					<Link to='/about'>About</Link>
-				</Text>
-				<Text
+					}}>About</Text></Link>
+				
+				
+					<Link to='/blog'><Text
 					px={2}
 					py={1}
 					rounded={'md'}
 					_hover={{
 						textDecoration: 'none',
 						bg: useColorModeValue('gray.200', 'gray.700'),
-					}}>
-					<Link to='/blog'>Blogs</Link>
-				</Text>
-				<Text
+					}}>Blogs</Text></Link>
+				
+					<Link to='/contact'><Text
 					px={2}
 					py={1}
 					rounded={'md'}
 					_hover={{
 						textDecoration: 'none',
 						bg: useColorModeValue('gray.200', 'gray.700'),
-					}}>
-					<Link to='/contact'>Contact</Link>
-				</Text>
+					}}>Contact</Text></Link>
+				
 			</HStack>
 		</HStack>
 	)
