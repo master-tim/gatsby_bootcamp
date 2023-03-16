@@ -25,7 +25,7 @@ const AboutPage = () => {
 		<Layout>
 			<Head title='About me' />
 			<Box>
-				<Canvas dpr={Math.max(window.devicePixelRatio, 2)} 
+				<Canvas 				dpr={[1, 2]} 
 				style={{ minHeight: '85vh', minWidth: '100vw' }}
 				camera={[0,0,0]}
 				>
