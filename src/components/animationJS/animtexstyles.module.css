@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100;0,400;0,700;0,800;0,900;1,100;1,400;1,600;1,900&display=swap');
+
 .trailsText {
     position: relatiave;
     width: 100%;
-    height: 80px;
-    line-height: 80px;
-    color: black;
-    font-size: 6em;
+    height: 85px;
+    line-height: 75px;
+    font-family: 'Georama', sans-serif;
+    font-size: 5.7em;
     font-weight: 800;
-    letter-spacing: -0.05em;
+    /* font-style: italic; */
     will-change: transform, opacity;
     overflow: hidden;
   }

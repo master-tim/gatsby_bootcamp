@@ -8,7 +8,7 @@ const Trail = ({ open, children }) => {
   const items = React.Children.toArray(children)
 
   const trail = useTrail(items.length, {
-    config: { mass: 5, tension: 1000, friction: 70 },
+    config: { mass: 5, tension: 1000, friction: open ? 70: 100 },
     opacity: open ? 1 : 0,
     x: open ? 0 : 100,
     height: open ? 150 : 0,
@@ -34,6 +34,8 @@ export default function AnimatedText() {
   };
   const stylesJobMode= {
     color: `${useColorModeValue('#3F3F3F', '#F4F4F4')}`,
+    fontWeight: "400",
+    fontStyle:"italic"
   };
 
   return (
