@@ -47,7 +47,7 @@ const Indexes = (data) => {
             bg: useColorModeValue("gray.200", "gray.700"),
           }}
         >
-          <Link to="/about">About</Link>å
+          <Link to="/about">About</Link>
         </Text>
         <Text
           px={2}
