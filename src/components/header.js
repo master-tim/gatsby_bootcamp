@@ -117,7 +117,9 @@ function Header() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
+              <Link to="/about">About</Link>
               <Link to="/blog">Blog</Link>
+              <Link to="/contact">Contact</Link>
             </Stack>
           </Box>
         ) : null}
