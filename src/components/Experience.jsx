@@ -43,6 +43,7 @@ const skills = [
     "HCI",
     "HRI",
 ];
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -83,19 +84,17 @@ function Word({
     const out = () => setHovered(false);
     // Change the mouse cursor on hover
     useEffect(() => {
-        if (hovered) 
+        if (hovered) {
             document.body.style.cursor = "pointer";
-        
-
-
+        }
         return() => (document.body.style.cursor = "auto");
     }, [hovered]);
     // Tie component to the render-loop
     useFrame(({camera}) => { // Make text face the camera
         ref.current.quaternion.copy(camera.quaternion);
-        // Animate font color
         ref.current.material.color.lerp(color.set(hovered ? "#fa2720" : "white"), 0.1);
     });
+
     return (<Text ref={ref}
         onPointerOver={over}
         onPointerOut={out}
@@ -115,16 +114,14 @@ function Cloud({
         const spherical = new THREE.Spherical();
         const phiSpan = Math.PI / (count + 1);
         const thetaSpan = (Math.PI * 2) / count;
-        for (let i = 1; i < count + 1; i++) 
-            for (let j = 0; j < count; j++) 
+        for (let i = 1; i < count + 1; i++) {
+            for (let j = 0; j < count; j++) {
                 temp.push([
                     new THREE.Vector3().setFromSpherical(spherical.set(radius, phiSpan * i, thetaSpan * j)),
                     randomSkill(),
                 ]);
-            
-        
-
-
+            }
+        }
         return temp;
     }, [count, radius]);
 
@@ -140,7 +137,6 @@ export default function Experience() {
             args={
                 ["#202020", 0, 80]
             }/>
-
         <Cloud count={8}
             radius={20}/>
         <OrbitControls enableZoom={false}/>
