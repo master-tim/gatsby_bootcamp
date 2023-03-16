@@ -139,6 +139,8 @@ export default function Experience() {
     const atom = useRef();
     const atom1 = useRef();
     const atom2 = useRef();
+    const atom3 = useRef();
+    const atom4 = useRef();
 
     const props = {
         base: {
@@ -154,13 +156,19 @@ export default function Experience() {
 
     useFrame(({camera, clock}) => {
         atom.current.position.x = Math.sin(clock.elapsedTime) * 21
-        atom.current.position.y = Math.cos(clock.elapsedTime) * 21
+        atom.current.position.y = -Math.cos(clock.elapsedTime) * 21
         atom.current.position.z = Math.sin(clock.elapsedTime) * 21
-        atom1.current.position.x = Math.cos(clock.elapsedTime) * 21
+        atom1.current.position.x = Math.cos(clock.elapsedTime+5) * 21
         atom1.current.position.y = Math.sin(clock.elapsedTime) * 21
-        atom1.current.position.z = Math.sin(clock.elapsedTime) * 21
+        atom1.current.position.z = Math.sin(clock.elapsedTime+2) * 21
         atom2.current.position.x = Math.cos(clock.elapsedTime) * 21
-        atom2.current.position.z = Math.sin(clock.elapsedTime) * 21
+        atom2.current.position.z = -Math.sin(clock.elapsedTime-9) * 21
+        atom3.current.position.x = Math.sin(clock.elapsedTime-3) * 21
+        atom3.current.position.y = -Math.cos(clock.elapsedTime+4) * 21
+        atom3.current.position.z = Math.sin(clock.elapsedTime+2) * 21
+        atom4.current.position.x = -Math.cos(clock.elapsedTime+5) * 21
+        atom4.current.position.y = -Math.sin(clock.elapsedTime) * 21
+        atom4.current.position.z = Math.sin(clock.elapsedTime+2) * 21
     });
 
     return (
@@ -192,6 +200,24 @@ export default function Experience() {
                 <meshBasicMaterial color="hotpink"/>
             </mesh>
             <mesh ref={atom2}
+                position={
+                    [22, 0, 0]
+            }>
+                <sphereBufferGeometry args={
+                    [.5, 12, 12]
+                }/>
+                <meshBasicMaterial color="hotpink"/>
+            </mesh>
+            <mesh ref={atom3}
+                position={
+                    [22, 0, 0]
+            }>
+                <sphereBufferGeometry args={
+                    [.5, 12, 12]
+                }/>
+                <meshBasicMaterial color="hotpink"/>
+            </mesh>
+            <mesh ref={atom4}
                 position={
                     [22, 0, 0]
             }>
