@@ -92,7 +92,7 @@ function Word({
     // Tie component to the render-loop
     useFrame(({camera}) => { // Make text face the camera
         ref.current.quaternion.copy(camera.quaternion);
-        ref.current.material.color.lerp(color.set(hovered ? "#fa2720" : "white"), 0.1);
+        ref.current.material.color.lerp(color.set(hovered ? "#1C77C3" : "white"), 0.1);
     });
 
     return (<Text ref={ref}
