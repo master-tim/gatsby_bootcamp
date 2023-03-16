@@ -1,18 +1,26 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
-import Chakra, {
+import {
   Box,
   Flex,
-  Text,
   Avatar,
-  HStack,
-  Heading,
-  IconButton,
+  Button,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
+  useColorMode,
+  Center,
+  Text,
+  Heading,
+  IconButton,
+  HStack,
 } from "@chakra-ui/react";
-
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 function Header() {
@@ -55,7 +63,11 @@ function Header() {
             >
               <Link to="/">{data.site.siteMetadata.nickname}</Link>
             </Heading>
-            <HStack as={"nav"} spacing={4}>
+            <HStack
+              as={"nav"}
+              spacing={4}
+              display={{ base: "none", md: "flex" }}
+            >
               <Text
                 px={2}
                 py={1}
@@ -105,10 +117,6 @@ function Header() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              {/* {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))} */}
-
               <Link to="/blog">Blog</Link>
             </Stack>
           </Box>
@@ -117,67 +125,5 @@ function Header() {
     </>
   );
 }
-
-// const Header = () => {
-
-//   return (
-//     <Box
-//       position="fixed"
-//       width="100vw"
-//       justifyContent="space-around"
-//       backgroundColor="whitesmoke"
-//       zIndex={999}
-//     >
-//       <Box maxWidth="1280px" margin="0 auto">
-//         <HStack
-//           px={16}
-//           py={4}
-//           justifyContent="space-between"
-//           alignItems="center"
-//         >
-//           <nav>
-//             <HStack spacing={8}>
-//               <Heading size="lg">
-//                 <Link to="/">Tim</Link>
-//               </Heading>
-//             </HStack>
-//           </nav>
-//           <nav>
-//             <HStack spacing={8}>
-//               <Text
-//                 _hover={{
-//                   color: "#ed7966",
-//                 }}
-//               >
-//                 <Link to="/">Home</Link>
-//               </Text>
-//               <Text
-//                 _hover={{
-//                   color: "#ed7966",
-//                 }}
-//               >
-//                 <Link to="/about">About me</Link>
-//               </Text>
-//               <Text
-//                 _hover={{
-//                   color: "#ed7966",
-//                 }}
-//               >
-//                 <Link to="/blog">Blog</Link>
-//               </Text>
-//               <Text
-//                 _hover={{
-//                   color: "#ed7966",
-//                 }}
-//               >
-//                 <Link to="/contact">Contact</Link>{" "}
-//               </Text>
-//             </HStack>
-//           </nav>
-//         </HStack>
-//       </Box>
-//     </Box>
-//   );
-// };
 
 export default Header;
