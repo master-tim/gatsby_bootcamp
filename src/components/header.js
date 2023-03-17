@@ -113,7 +113,7 @@ function Header() {
 					<Indexes />
 					<Flex
 						alignItems={'center'}
-						marginRight='1rem'>
+					>
 						<Button onClick={toggleColorMode}>
 							{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 						</Button>

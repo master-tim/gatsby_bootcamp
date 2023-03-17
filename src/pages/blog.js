@@ -22,17 +22,17 @@ const BlogPage = () => {
 	`)
 
 	const stylesSpecial= useColorModeValue('#1C77C3', '#FFEB3B');
-	const stylesBasic= useColorModeValue('gray.500', 'gray.500');
-	const stylesBasics= useColorModeValue('gray.900', 'gray.200');
+	const neutralColor= useColorModeValue('gray.500', 'gray.500');
+	const textColor= useColorModeValue('gray.900', 'gray.100');
 	const colorsReversed = useColorModeValue('gray.100', 'gray.900');
 
 	return (
-		<ChakraProvider>
+		// <ChakraProvider>
 			<Layout>
 			<Head title='Blog'/>
-				<Stack spacing={3} paddingTop="5vh" minW="80vw"  color={stylesBasic} >
+				<Stack spacing={3} paddingTop="5vh" minW="80vw"   >
 					<HStack>
-						<Text fontSize="xl" fontStyle="italic">Resent Blogs</Text>
+						<Text fontSize="xl" fontStyle="italic" color={neutralColor}>Resent Blogs</Text>
 						<Box/>
 					</HStack>
 					<Box p={3}/>
@@ -40,18 +40,22 @@ const BlogPage = () => {
 						return (<>
 							<Divider/>
 							<Box
-								color={stylesBasics}
+								color={textColor}
 								justifyContent="space-around"
 								paddingTop={5}
 								key={data.node.title}
 								borderRadius="30px"
 								h="200px"
 							>
-								<Heading size='xl'>{data.node.title} </Heading>
+								<Heading 
+									size='xl'
+								>
+									{data.node.title} 
+								</Heading>
 								<Text 
 									paddingTop={3}
 									fontStyle="italic"
-									color={stylesBasic}
+									color={neutralColor}
 								>{data.node.publishedDate}</Text>
 								<HStack 
 									paddingTop={3} 
@@ -72,7 +76,7 @@ const BlogPage = () => {
 
 											}}
 										>
-											<Text >Read more</Text>
+											<Text>Read more</Text>
 											<ArrowForwardIcon/>
 										</HStack>
 									</Link> 
@@ -86,7 +90,7 @@ const BlogPage = () => {
 
 				</Stack>
 			</Layout>
-		</ChakraProvider>
+		// </ChakraProvider>
 	)
 }
 
