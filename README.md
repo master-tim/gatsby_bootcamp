@@ -17,9 +17,12 @@ To install this website on your local machine, please follow these steps:
 
 This website was built using the following technologies:
 
-- **Gatsby**: A modern website framework based on React.
-- **React**: A JavaScript library for building user interfaces.
-- **GraphQL**: A query language and runtime for APIs.
+- **Gatsby** 
+- **React**
+- **Chakra UI** 
+- **React-three-fiber** 
+- **React-three-drei** 
+- **GraphQL**
 
 ## 🎉 Features
 
